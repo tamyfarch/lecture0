@@ -1,0 +1,36 @@
+module.exports = {
+  env: {
+    es2021: true,
+    node: true,
+  },
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    'no-dupe-keys': 'error',
+    'no-undef': 'error',
+    'no-unreachable': 'error',
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-useless-constructor': 'error',
+    'no-duplicate-imports': 'error',
+    'no-duplicate-case': 'error',
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'react/jsx-no-undef': 'error',
+    'react/jsx-uses-vars': 'warn',
+    'react/jsx-uses-react': 'error',
+    'react/react-in-jsx-scope': 'error',
+    'react/no-string-refs': 'error',
+    'react/prop-types': ['warn', { skipUndeclared: true }],
+    'react/forbid-prop-types': 'warn',
+    'react/prefer-stateless-function': 'warn',
+    'prettier/prettier': 'error',
+  },
+};
